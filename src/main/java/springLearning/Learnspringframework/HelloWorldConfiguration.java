@@ -1,7 +1,9 @@
 package springLearning.Learnspringframework;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 record Person(String name,int age,Address addd){};
 
@@ -46,4 +48,29 @@ public class HelloWorldConfiguration {
     public Address ad3(){
         return new Address("dmp","Hyderabad");
     }
+
+    @Bean
+    @Primary
+    public Person person4Parameters(String name, int age, Address add4) {
+        return new Person(name, age, add4);
+    }
+    @Bean(name = "add4")
+    @Primary
+    public Address ad4(){
+        return new Address("dmp","Hyderabad");
+    }
+
+    @Bean
+    @Qualifier
+    public Person person5Qualifier(String name,int age,@Qualifier("add5") Address add3){
+        return new Person(name,age, add3);
+    }
+    @Bean(name = "add5")
+    @Qualifier("add5")
+    public Address ad5(){
+        return new Address("dmp","Hyderabad");
+    }
+
+
 }
+

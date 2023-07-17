@@ -3,6 +3,8 @@ package springLearning.Learnspringframework;
 import org.springframework.boot.autoconfigure.web.reactive.HttpHandlerAutoConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.Arrays;
+
 public class app02HelloWorldSpring {
     public static void main(String[] args) {
         //1:launch a spring context
@@ -19,7 +21,10 @@ public class app02HelloWorldSpring {
         System.out.println(context.getBean("add2"));
         System.out.println(context.getBean("person2MethodCall"));
         System.out.println(context.getBean("person3Parameters"));
-//        System.out.println(context.getBean(Address.class));
+        System.out.println(context
+                .getBean(Person.class));
+        System.out.println(context.getBean(Address.class));
+//        Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 
     }
 }
