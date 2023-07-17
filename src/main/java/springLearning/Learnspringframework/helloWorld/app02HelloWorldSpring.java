@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class app02HelloWorldSpring {
     public static void main(String[] args) {
         //1:launch a spring context
-        try(var context =new AnnotationConfigApplicationContext(HelloWorldConfiguration.class);){
+        try(var context =new AnnotationConfigApplicationContext(HelloWorldConfiguration.class)){
             //2:configure the things that we want spring framework to manage-@Configuration
             //HelloWorldConfiguration -@Configration
             //name :@Bean
