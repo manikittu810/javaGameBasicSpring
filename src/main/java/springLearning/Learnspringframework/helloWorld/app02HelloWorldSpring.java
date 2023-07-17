@@ -1,6 +1,5 @@
-package springLearning.Learnspringframework;
+package springLearning.Learnspringframework.helloWorld;
 
-import org.springframework.boot.autoconfigure.web.reactive.HttpHandlerAutoConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.Arrays;
