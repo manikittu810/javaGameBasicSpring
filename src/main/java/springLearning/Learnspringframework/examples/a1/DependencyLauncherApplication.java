@@ -17,7 +17,7 @@ Dependency2 dependency2;
 //    @Autowired
     public YourBusinessClass(Dependency1 dependency1, Dependency2 dependency2) {
         super();
-        System.out.println("Constructor injection -> YourBusinessClass"); //Constructor injection  and @Autowired is not mandatory
+        System.out.println("Constructor injection -> YourBusinessClass"); //Constructor injection  and @Autowired is not mandatory and spring team suggests to use Constructor injection
         this.dependency1 = dependency1;
         this.dependency2 = dependency2;
     }
